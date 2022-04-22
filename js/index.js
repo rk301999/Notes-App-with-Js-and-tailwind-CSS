@@ -28,10 +28,10 @@ function showNotes(){
     }
     let html = "";
     notesObj.forEach(function(element,index) {
-        html+= `<div class="cards border-2 ">
-        <p class="text-sm py-2"> Add note ${index + 1}</p>
-        <p class="py-2"> ${element}</p>
-        <button id="${index}" onclick="deleteNote(this.id)" class=" bg-black text-sm text-white px-2 py-1 rounded-lg hover:bg-gray-700 ">Delete Note </button>
+        html+= `<div class="cards px-2 py-2 border-2 rounded-lg  border-green-900 ">
+        <p class=" py-1 font-semibold"> ADD NOTE ${index + 1}</p>
+        <p class="py-1 "> ${element}</p>
+        <button id="${index}" onclick="deleteNote(this.id)" class="ml-8 bg-red-400 text-sm text-black px-2 py-1 rounded-lg hover:bg-red-500 ">Delete Note </button>
     </div>`
     });
 
@@ -56,3 +56,22 @@ function showNotes(){
         localStorage.setItem("notes",JSON.stringify(notesObj));
         showNotes();
     }
+
+let search = document.getElementById("searchTxt");
+search.addEventListener("input",function(){
+
+    let inputval = search.value.toLowerCase();
+    
+    console.log(inputval);
+    let cards = document.getElementsByClassName("cards");
+    console.log(cards);
+    Array.from(cards).forEach(function(element){
+        let cardTxt = element.getElementsByTagName("p")[1].innerText.toLowerCase();
+        console.log(cardTxt);
+        if(cardTxt.includes(inputval)){
+            element.style.display = "block";
+        }else{
+            element.style.display = "none"
+        }
+    })
+})

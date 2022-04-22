@@ -8,27 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar flex justify-between items-center  bg-gray-700">
+    <div class="navbar flex justify-between items-center  bg-green-800">
         <div class="first flex">
             <div class="font-medium mx-3 cursor-pointer">Magic Notes</div>
             <div class="cursor-pointer">Home</div>
         </div>
         <div class="second rounded-lg">
             <form action="" class="py-1 px-2 ">
-                <input type= "text" name="search" placeholder="search talk" autocomplete="off" aria-label="search talk" class="px-3 py-2 border-b-gray-700" >
+                <input type= "text" id="searchTxt" name="search" placeholder="search talk" autocomplete="off" aria-label="search talk" class="px-3 py-2 border-b-gray-700" >
             </form>
         </div>
     </div>
-    <div class="container my-3">
-        <h1 class="text-5xl text-center font-serif">Welcome to Magic Notes!</h1>
+    <div class=""> 
+    <div class="container ">
+        <h1 class="  text-5xl text-center text-green-900 font-serif">Welcome to Magic Notes!</h1>
     </div>
     <div class="workarea py-2">
         <!-- <input type="text" placeholder="type here" class="items-start mx-96 w-1/2 h-40"> -->
-        <textarea class="mx-96 px-2 py-2 border-2 border-black" placeholder="Type here" name="type here" cols="52" rows="7" id="addTxt"></textarea>
-        <button class="mx-96 bg-black text-white px-2 py-1 rounded-lg hover:bg-gray-700 " id="addBtn">Add Note </button>
+        <textarea class="mx-96 px-2 py-2 border-2 border-amber-800" placeholder="Type here" name="type here" cols="52" rows="7" id="addTxt"></textarea>
+        <button class="mx-96 bg-red-400 hover:bg-red-500 hover:border-red-800 text-sm text-black " id="addBtn">Add Note </button>
     </div>
-    <div class="notes grid grid-cols-3 gap-4 space-x-3 w-1/2 mx-80" id="notes">
+    <div class="notes grid grid-cols-3 gap-4  w-1/2 mx-80" id="notes">
         
+    </div>
     </div>
 </body>
 <script src="js/index.js"></script>
